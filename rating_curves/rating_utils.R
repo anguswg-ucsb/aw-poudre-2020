@@ -124,8 +124,8 @@ get_flow_data <- function(sensor_name) {
   url <- "https://opendata.fcgov.com/resource/f5as-vvbj.json?sensor_name="
   
   sensor_url <- paste0(url, gsub(" ", "%20", sensor_name))
-  
-  flow_data <- RSocrata::read.socrata(
+
+    flow_data <- RSocrata::read.socrata(
     url = sensor_url                    # 'https://opendata.fcgov.com/resource/f5as-vvbj.json?sensor_name=Poudre%20Park'
   )
   
